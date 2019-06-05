@@ -1,0 +1,39 @@
+<%= form_with(model: poll, remote: true, format: :json, id: 'add_poll') do |form| %>
+      <% if poll.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(poll.errors.count, "error") %> prohibited this poll from being saved:</h2>
+          <ul>
+          <% poll.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <div class="field">
+        <%= form.label :name %>
+        <%= form.text_field :name, id: :poll_name, class: "form-control" %>
+      </div>
+
+
+      <div class="field">
+			 <input  type="text" name="question" placeholder="질문을 입력하세요"></br>
+			 <input  type="text" name="ans1" value="1">
+      		 <%= form.radio_button :laptop, '1'  %>
+			  <input  type="text" name="ans2" value="2">
+		  	 <%= form.radio_button :laptop, '2' %>
+      		 <input  type="text" name="ans3" value="3">
+      		 <%= form.radio_button :laptop,'3' %>
+			 <input  type="text" name="ans4" value="4">
+       		 <%= form.radio_button :laptop, '4' %>
+			 <input  type="text" name="ans5" value="5">
+       		 <%= form.radio_button :laptop, '5' %>
+		  
+		  <br /> 
+		  
+        
+      </div>
+      <div class="actions">
+        <%= form.submit 'submit', class: "btn btn-success"%>
+      </div>
+    <% end %>
+
