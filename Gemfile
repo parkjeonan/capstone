@@ -18,7 +18,7 @@ gem 'bootstrap', '~> 4.3', '>= 4.3.1'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'pusher', '~> 1.3', '>= 1.3.2'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
-gem 'chartkick', '~> 3.1'
+gem 'chartkick', '~> 3.3'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
